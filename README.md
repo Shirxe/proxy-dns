@@ -1,5 +1,5 @@
 # Proxy DNS
-
+## The proxy DNS server does not support multiple queries in a single UDP request.
 ## Configuration
 
 The project uses a configuration file located at `config/config.toml` with the main settings:
