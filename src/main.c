@@ -144,12 +144,13 @@ int main(int argc, char* argv[]) {
             } else {
                 printf("redirected to upstream dns\n\n");
                 dns_free_packet(&packet);
+                break;
             }
         }
 
         if (is_blacklisted) {
             uint8_t response[BUFFER_SIZE];
-            ssize_t resp_len = dns_create_response_with_error(buffer, len, response, &packet, config.blacklist_response_code);
+            ssize_t resp_len = dns_create_response_with_error(buffer, len, response, config.blacklist_response_code);
             ssize_t sent = sendto(sockfd, response, resp_len, 0,
                                   (struct sockaddr *)&client_addr, client_len);
             if (sent < 0) {

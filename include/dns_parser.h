@@ -31,6 +31,6 @@ void dns_free_packet(dns_packet_t* packet);
 
 bool dns_is_blacklisted_ip(const char* addr, const config_data* confg);
 
-ssize_t dns_create_response_with_error(uint8_t* request, ssize_t req_len, uint8_t* response, dns_packet_t* packet, int FLAGS);
+ssize_t dns_create_response_with_error(uint8_t* request, ssize_t req_len, uint8_t* response, int FLAGS);
 
 #endif // DNS_PARSER_H
