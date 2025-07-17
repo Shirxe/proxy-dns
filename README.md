@@ -44,8 +44,6 @@ cmake --build .
 
 ## Testing
 
-Before running tests, make sure **the project is built**.
-
 You can configure testing parameters in the `test/test.sh` script:
 
 ```bash
@@ -70,6 +68,13 @@ DOMAINS=(
 ```
 
 # Execute test
+
+Before starting the tests, make sure that **the project is built** and that the **"dig"** utility is installed:
+```bash
+sudo apt install dnsutils
+sudo pacman -S bind
+```
+
 ```bash
 cd test/
 chmod +x test.sh
