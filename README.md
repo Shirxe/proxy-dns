@@ -52,7 +52,7 @@ PORT=9898
 
 # A - IPv4
 # AAAA - IPv6
-FLAGS=AAAA
+FLAGS=A
 
 DOMAINS=(
     "mysite.dp"
