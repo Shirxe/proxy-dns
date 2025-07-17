@@ -35,6 +35,7 @@ blacklist = ["*.mysite.dp.*", "google.com"]
 ```bash
 git clone https://github.com/Shirxe/proxy-dns
 cd proxy-dns/
+git submodule update --init --recursive
 mkdir build
 cd build
 cmake ..
